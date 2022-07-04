@@ -1,88 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-  <title>LG3</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
   <style>
-    html {
-      height: 100%;
-    }
-
-    body {
-      margin: 0;
-      height: 100%;
-    }
-
-    .image_container {
-      width: 800px;
-      height: 600px;
-      background-image: url(bg.jpg);
-      background-size: contain;
+    div {
+      text-align: center;
+      font-size: large;
     }
   </style>
-  <!-- copy these lines to your document head: -->
-
-  <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=300" />
-
-  <script src="hybsspapi.js"></script>
-
-  <script type="text/javascript">
-
-
-
-
-    window._hyb_ssp && _hyb_ssp.in_image_configureOverlay({
-      showCloseButtonMode: "hide",
-      height: 250,
-      useCustomClick: true
-
-    });
-
-    window._hyb_clickUrl = "{clickurl}";
-
-    function addEventListenerToNode(node, eventName, listener) {
-      if (node.addEventListener) {
-        node.addEventListener(eventName, listener, false);
-      } else if (node.attachEvent) {
-        node.attachEvent("on" + eventName, listener);
-      }
-    }
-
-    addEventListenerToNode(window, "message", function (e) {
-      if (e.origin == window._hyb_overlay_settings.locationOrigin && e.target.name == "hybrid_inimage_ssp_api") {
-        if (e.data.action === "refreshBanner") {
-          var hypeDocuments = Object.keys(HYPE.documents);
-
-          if (hypeDocuments.length) {
-            document.body.style.display = "block";
-            var hypeDocument = HYPE.documents[hypeDocuments[0]];
-            hypeDocument.showSceneNamed(hypeDocument.currentSceneName());
-          }
-        }
-
-        if (e.data.action === "showBanner") {
-          document.body.style.display = "block";
-        }
-      }
-    });
-
-
-  </script>
-
 </head>
 
 <body>
-
-  <div class="image_container">
-    <div id="lg3_hype_container" class="HYPE_document"
-      style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
-      <script type="text/javascript" charset="utf-8"
-        src="LG3.hyperesources/lg3_hype_generated_script.js?64184"></script>
-    </div>
+  <div>
+    <h1><a href="Great_Kate/Great_Kate.html">Great_Kate</a></h1>
+    <h1><a href="LG3/LG3.html">LG3</a></h1>
+    <h1><a href="Nasledniki/Nasledniki.html">Nasledniki</a></h1>
+    <h1><a href="Legogo_STARWARS/Legogo_STARWARS.html">Legogo_STARWARS</a></h1>
+    <h1><a href="Skoda/Skoda.html">Skoda</a></h1>
+    <h1><a href="Autoteka/Autoteka.html">Autoteka</a></h1>
+    <h1><a href="Dell/Dell.html">Dell</a></h1>
+    <h1><a href="Dom_Ru/Dom_Ru.html">Dom_Ru</a></h1>
+    <h1><a href="Main_Oreo/Main_Oreo.html">Main_Oreo</a></h1>
+    <h1><a href="Perekrestok/Perekrestok.html">Perekrestok</a></h1>
+    <h1><a href="Kinder_WBRM/Kinder_WBRM.html">Kinder_WBRM</a></h1>
+    <h1><a href="AlpenGold/AlpenGold.html">AlpenGold</a></h1>
+    <h1><a href="Dino/Dino.html">Dino</a></h1>
   </div>
-
 </body>
 
 </html>

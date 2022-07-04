@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+  <title>Main_Oreo</title>
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    .image_container {
+      width: 600px;
+      height: 400px;
+      background-image: url(bg.jpg);
+      background-size: contain;
+    }
+  </style>
+  <!-- copy these lines to your document head: -->
+
+  <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, width=300" />
+
+  <script src="hybsspapi.js"></script>
+
+  <script type="text/javascript">
+
+
+    window._hyb_ssp && _hyb_ssp.in_image_configureOverlay({
+      showCloseButtonMode: "hide",
+      height: 250,
+      useCustomClick: true
+
+    });
+
+    window._hyb_clickUrl = "{clickurl}";
+
+    function addEventListenerToNode(node, eventName, listener) {
+      if (node.addEventListener) {
+        node.addEventListener(eventName, listener, false);
+      } else if (node.attachEvent) {
+        node.attachEvent("on" + eventName, listener);
+      }
+    }
+
+    addEventListenerToNode(window, "message", function (e) {
+      if (e.origin == window._hyb_overlay_settings.locationOrigin && e.target.name == "hybrid_inimage_ssp_api") {
+        if (e.data.action === "refreshBanner") {
+          var hypeDocuments = Object.keys(HYPE.documents);
+
+          if (hypeDocuments.length) {
+            document.body.style.display = "block";
+            var hypeDocument = HYPE.documents[hypeDocuments[0]];
+            hypeDocument.showSceneNamed(hypeDocument.currentSceneName());
+          }
+        }
+
+        if (e.data.action === "showBanner") {
+          document.body.style.display = "block";
+        }
+      }
+    });
+
+
+  </script>
+</head>
+
+<body>
+  <div class="image_container">
+    <div id="mainoreo_hype_container" class="HYPE_document"
+      style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+      <script type="text/javascript" charset="utf-8"
+        src="Main_Oreo.hyperesources/mainoreo_hype_generated_script.js?15334"></script>
+    </div>
+  </div>
+</body>
+
+</html>
